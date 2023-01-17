@@ -1,0 +1,51 @@
+Table Queries
+1. Users Table
+
+
+CREATE TABLE users (useremail VARCHAR(50), pwd VARCHAR(50));
+
+2. registernewemp Table
+
+CREATE TABLE registernewemp (empid INT NOT NULL, firstname VARCHAR(50), lastname VARCHAR(50), empmaiidl VARCHAR(80), branchnum VARCHAR(50), pwd VARCHAR(50), confirmpwd VARCHAR(50), PRIMARY KEY (empid));
+
+3. registernewclient Table
+
+CREATE TABLE registernewclient (clientid INT NOT NULL, `companyName` VARCHAR(100), taxid VARCHAR(100), address VARCHAR(100), email VARCHAR(50), phone VARCHAR(50), PRIMARY KEY (clientid));
+
+4. orderdetails Table
+
+CREATE TABLE orderdetails (orderid INT NOT NULL, cname VARCHAR(50), cemail VARCHAR(100), clientcrn VARCHAR(100), equname VARCHAR(100), `serviceType` VARCHAR(100), partnername VARCHAR(100), dttime VARCHAR(100), productname VARCHAR(100), productgrade VARCHAR(100), inspectiontype VARCHAR(100), terminalname VARCHAR(100), postname VARCHAR(100), perinvoicesplit VARCHAR(100), tolerence VARCHAR(100), nominalqty VARCHAR(50), PRIMARY KEY (orderid));
+
+5.Cost table
+
+CREATE TABLE cost (`type` VARCHAR(100), price DOUBLE);
+
+Insert Command
+INSERT INTO omidb.cost (`type`, price) 
+	VALUES   ('Ship Load', 9999.99)
+                ,('Ship Discharge',9999.99)
+                ,('Lighthering',13500.00)
+                ,('Bunker Survey',1500.00)
+                ,('Inventory',16000.00)
+                ,('Shore tank Sampling',500.00) 
+                ,('Railcar Sampling',450.00)
+                ,('Shore Tank Gauging',250.00) 
+                ,('Analysis',1300.00)
+                ,('Pipeline Transfer',1600.00)
+                ,('Wallwash',799.99)
+                ,('Pre-inspection',499.99)
+                ,('Railcar Gauging',359.99)
+                ,('Barge Load',1200.00)
+                ,('Barge Discharge',1200.00)
+                ,('Sample Shipping',699.99) 
+                ,('Witnessing',800.00); 
+
+6. Invoice Table
+CREATE TABLE invoice (invid BIGINT NOT NULL);
+
+Insert Command
+INSERT INTO omidb.invoice (invid) 
+	VALUES (7000009);
+
+INSERT INTO omidb.users (useremail,pwd) 
+	VALUES ('javascholars@gmail.com','123456');
